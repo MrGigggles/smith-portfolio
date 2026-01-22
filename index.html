@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Instructional Design Portfolio</title>
+
+  <style>
+    :root {
+      --bg: #f8f9fb;
+      --fg: #1f2933;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --border: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--fg);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    /* Layout */
+    .page {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      padding: 2rem 1.5rem;
+      border-right: 1px solid var(--border);
+      background: #fff;
+    }
+
+    nav h1 {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      margin-bottom: 0.75rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+
+    nav a.active {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    main {
+      padding: 3rem 4rem;
+    }
+
+    section {
+      margin-bottom: 6rem;
+      scroll-margin-top: 2rem;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    section p {
+      max-width: 65ch;
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 240px;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 50%;
+      background: #ddd;
+    }
+
+    .hero .blurb {
+      font-size: 1.1rem;
+    }
+
+    /* Cards */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    .card a {
+      margin-top: 1rem;
+      align-self: flex-start;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* Contact */
+    .contact a {
+      display: inline-block;
+      margin-right: 1.5rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* Footer-ish spacing */
+    .spacer {
+      height: 8rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .page {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+
+      nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      main {
+        padding: 2rem;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero img {
+        max-width: 180px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page">
+    <nav>
+      <h1>Portfolio</h1>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#featured">Featured Projects</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#bio">Bio</a></li>
+        <li><a href="#other">Other Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- Hero -->
+      <section id="hero" class="hero">
+        <div>
+          <h2>Instructional Designer</h2>
+          <p class="blurb">
+            I design learning experiences that are clear, humane, and grounded
+            in how people actually learn. This portfolio highlights selected
+            projects, process, and experiments.
+          </p>
+        </div>
+        <img src="https://via.placeholder.com/400" alt="Headshot placeholder" />
+      </section>
+
+      <!-- Featured Projects -->
+      <section id="featured">
+        <h2>Featured Projects</h2>
+        <div class="card-grid">
+          <div class="card">
+            <div>
+              <h3>Project One</h3>
+              <p>
+                A short description of the problem, context, and instructional
+                approach. Focus on decisions and outcomes rather than tools.
+              </p>
+            </div>
+            <a href="https://google.com" target="_blank" rel="noopener">View case study →</a>
+          </div>
+
+          <div class="card">
+            <div>
+              <h3>Project Two</h3>
+              <p>
+                Another representative project demonstrating analysis,
+                alignment, and learner-centered design.
+              </p>
+            </div>
+            <a href="https://google.com" target="_blank" rel="noopener">View case study →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section id="process">
+        <h2>Process & Design Philosophy</h2>
+        <p>
+          My work emphasizes clarity, accessibility, and iterative improvement.
+          I start with learner needs, constraints, and context, and design
+          solutions that are practical, scalable, and respectful of time.
+        </p>
+      </section>
+
+      <!-- Bio -->
+      <section id="bio">
+        <h2>About Me</h2>
+        <p>
+          This is the longer bio section. Talk about your background, how you
+          arrived at instructional design, and what shapes your approach.
+          Mention relevant experience, domains, or roles without turning this
+          into a résumé.
+        </p>
+      </section>
+
+      <!-- Other Projects -->
+      <section id="other">
+        <h2>Other Projects</h2>
+        <div class="card-grid">
+          <div class="card">
+            <h3>Smaller Project</h3>
+            <p>
+              Brief description or experiment. This can be lighter-weight work,
+              prototypes, or exploratory projects.
+            </p>
+            <a href="https://google.com">View →</a>
+          </div>
+
+          <div class="card">
+            <h3>Another Project</h3>
+            <p>
+              A second supporting project that adds breadth without overwhelming
+              the reader.
+            </p>
+            <a href="https://google.com">View →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>
+          Reach out if you’d like to talk about learning design, collaboration,
+          or opportunities.
+        </p>
+        <a href="mailto:hello@example.com">Email</a>
+        <a href="https://google.com" target="_blank" rel="noopener">LinkedIn</a>
+      </section>
+
+      <div class="spacer"></div>
+    </main>
+  </div>
+
+  <script>
+    // Scrollspy using IntersectionObserver
+    const sections = document.querySelectorAll("main section");
+    const navLinks = document.querySelectorAll("nav a");
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            navLinks.forEach(link => {
+              link.classList.toggle(
+                "active",
+                link.getAttribute("href") === "#" + entry.target.id
+              );
+            });
+          }
+        });
+      },
+      {
+        rootMargin: "-40% 0px -50% 0px"
+      }
+    );
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+
+</body>
+</html>
