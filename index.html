@@ -11,6 +11,7 @@
       --fg: #1f2933;
       --muted: #6b7280;
       --accent: #2563eb;
+      --accent-soft: #dbeafe;
       --border: #e5e7eb;
     }
 
@@ -48,9 +49,9 @@
     }
 
     nav h1 {
-      font-size: 1rem;
+      font-size: 0.9rem;
       margin-bottom: 1.5rem;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--muted);
     }
@@ -72,9 +73,17 @@
       transition: color 0.2s ease;
     }
 
+    nav a:hover {
+      color: var(--fg);
+    }
+
     nav a.active {
       color: var(--accent);
       font-weight: 600;
+    }
+
+    nav a.active::before {
+      content: "→ ";
     }
 
     main {
@@ -89,6 +98,17 @@
     section h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
+      position: relative;
+    }
+
+    section h2::after {
+      content: "";
+      display: block;
+      width: 48px;
+      height: 4px;
+      background: var(--accent);
+      margin-top: 0.5rem;
+      border-radius: 2px;
     }
 
     section p {
@@ -101,6 +121,19 @@
       grid-template-columns: 1fr 240px;
       gap: 3rem;
       align-items: center;
+      background: linear-gradient(to right, var(--accent-soft), transparent);
+      padding: 2.5rem;
+      border-radius: 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      line-height: 1.2;
+      margin-top: 0;
+    }
+
+    .hero .blurb {
+      font-size: 1.1rem;
     }
 
     .hero img {
@@ -109,10 +142,6 @@
       object-fit: cover;
       border-radius: 50%;
       background: #ddd;
-    }
-
-    .hero .blurb {
-      font-size: 1.1rem;
     }
 
     /* Cards */
@@ -126,7 +155,7 @@
     .card {
       background: #fff;
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 16px;
       padding: 1.5rem;
       display: flex;
       flex-direction: column;
@@ -136,12 +165,22 @@
 
     .card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+    }
+
+    .card img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      background: #e5e7eb;
     }
 
     .card h3 {
       margin-top: 0;
       margin-bottom: 0.5rem;
+      font-size: 1.1rem;
     }
 
     .card a {
@@ -161,7 +200,6 @@
       font-weight: 500;
     }
 
-    /* Footer-ish spacing */
     .spacer {
       height: 8rem;
     }
@@ -227,6 +265,8 @@
             projects, process, and experiments.
           </p>
         </div>
+
+        <!-- Replace with your headshot -->
         <img src="https://via.placeholder.com/400" alt="Headshot placeholder" />
       </section>
 
@@ -234,7 +274,10 @@
       <section id="featured">
         <h2>Featured Projects</h2>
         <div class="card-grid">
+
           <div class="card">
+            <!-- Replace with project screenshot -->
+            <img src="https://via.placeholder.com/800x450" alt="Project One preview" />
             <div>
               <h3>Project One</h3>
               <p>
@@ -242,10 +285,13 @@
                 approach. Focus on decisions and outcomes rather than tools.
               </p>
             </div>
-            <a href="https://google.com" target="_blank" rel="noopener">View case study →</a>
+            <a href="https://google.com" target="_blank" rel="noopener">
+              View case study →
+            </a>
           </div>
 
           <div class="card">
+            <img src="https://via.placeholder.com/800x450" alt="Project Two preview" />
             <div>
               <h3>Project Two</h3>
               <p>
@@ -253,8 +299,11 @@
                 alignment, and learner-centered design.
               </p>
             </div>
-            <a href="https://google.com" target="_blank" rel="noopener">View case study →</a>
+            <a href="https://google.com" target="_blank" rel="noopener">
+              View case study →
+            </a>
           </div>
+
         </div>
       </section>
 
@@ -274,8 +323,7 @@
         <p>
           This is the longer bio section. Talk about your background, how you
           arrived at instructional design, and what shapes your approach.
-          Mention relevant experience, domains, or roles without turning this
-          into a résumé.
+          Mention relevant experience without turning this into a résumé.
         </p>
       </section>
 
@@ -283,7 +331,9 @@
       <section id="other">
         <h2>Other Projects</h2>
         <div class="card-grid">
+
           <div class="card">
+            <img src="https://via.placeholder.com/800x450" alt="Smaller project preview" />
             <h3>Smaller Project</h3>
             <p>
               Brief description or experiment. This can be lighter-weight work,
@@ -293,6 +343,7 @@
           </div>
 
           <div class="card">
+            <img src="https://via.placeholder.com/800x450" alt="Another project preview" />
             <h3>Another Project</h3>
             <p>
               A second supporting project that adds breadth without overwhelming
@@ -300,6 +351,7 @@
             </p>
             <a href="https://google.com">View →</a>
           </div>
+
         </div>
       </section>
 
@@ -319,7 +371,6 @@
   </div>
 
   <script>
-    // Scrollspy using IntersectionObserver
     const sections = document.querySelectorAll("main section");
     const navLinks = document.querySelectorAll("nav a");
 
