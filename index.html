@@ -115,9 +115,10 @@
       max-width: 65ch;
     }
 
-    .about-layout {
+/* About section layout */
+.about-layout {
   display: grid;
-  grid-template-columns: 1fr 2fr; /* ~33% image */
+  grid-template-columns: 2fr 1fr; /* text ~67%, image ~33% */
   gap: 2.5rem;
   align-items: start;
 }
@@ -135,7 +136,7 @@
     grid-template-columns: 1fr;
   }
 }
-
+    
     /* Hero */
     .hero {
       display: grid;
@@ -299,16 +300,16 @@
       <!-- Hero -->
       <section id="hero" class="hero">
         <div>
-          <h2>Instructional Designer</h2>
+          <h2>Dan Smith - ID, UXD, LXD</h2>
           <p class="blurb">
-            I design learning experiences that are clear, humane, and grounded
-            in how people actually learn. This portfolio highlights selected
-            projects, process, and experiments.
+            Hello! I'm Dan.
+            <br><br>
+            I design learning experiences that are powerfully engaging and driven by evidence-based practice. With a background in eLearning technolgoy and development, my learning experiences are technology-forward while remaining human-centered.
           </p>
         </div>
 
         <!-- Replace with your headshot -->
-        <img src="https://via.placeholder.com/400" alt="Headshot placeholder" />
+        <img src="me.png" alt="Headshot placeholder" />
       </section>
 
 <!-- Featured Projects -->
@@ -317,49 +318,46 @@
 
   <div class="card featured-project">
     <!-- Replace with project screenshot -->
-    <img src="https://via.placeholder.com/600x800" alt="Featured project preview" />
+    <img src="feature.png" alt="Featured project preview" />
 
     <div>
       <h3>Featured Project</h3>
       <p>
-        A deeper look at a representative project. Describe the problem,
-        constraints, instructional decisions, and outcomes. Emphasize
-        thinking and impact over tools.
+       <b>Chess Basics Course</b>
+        <br><br>
+        Built with Articulate Rise and Storyline, this eLearning experience blends polish and ease of use with engaging interactivity. Guided by Mayer's Multimedia Principles and Adult Learning Theory, users are given full control of their learning experience with the ability to move chess pieces across the board realistically and receive real-time feedback on their moves.
       </p>
 
-      <a href="https://google.com" target="_blank" rel="noopener">
-        View case study →
+      <a href="https://share.articulate.com/BLDJ5PMwzl1uLrcCR_4f2" target="_blank" rel="noopener">
+        View the Chess Basics Course →
       </a>
     </div>
   </div>
 </section>
 
-      <!-- Process -->
-      <section id="process">
-        <h2>Process & Design Philosophy</h2>
-        <p>
-          My work emphasizes clarity, accessibility, and iterative improvement.
-          I start with learner needs, constraints, and context, and design
-          solutions that are practical, scalable, and respectful of time.
-        </p>
-      </section>
-
 <!-- Bio -->
 <section id="bio">
-  <h2>About Me</h2>
+  <h2>Personal Statement</h2>
 
   <div class="about-layout">
-    <!-- Replace with another photo of yourself -->
-    <img src="https://via.placeholder.com/600x800" alt="Portrait of me" />
-
     <p>
-      This is the longer bio section. Talk about your background, how you
-      arrived at instructional design, and what shapes your approach.
-      Mention relevant experience without turning this into a résumé.
+      My first day of grad school was also my first day teaching, when I stepped 
+      into a Music Theory 101 course at 8 AM on a Monday.
+      I learned a hard lesson that we've all experienced at one point or another: 
+      <b>being good at something doesn't make you good at teaching it</b>. Two years later, 
+      I left music school as a much better teacher than that first day, but I never forgot that gap
+      in effective learning design practice that was so apparent on that first day.
+      <br><br>
+      Ten years later, I've learned how to fill that gap. With seven years of experience in eLearning development and LMS administration,
+      combined with a master's degree in instructional design. My design process is rooted in: <b>Adult Learning Theory</b> to create
+      experiences that actually match way people learn; sound application of <b>Multimedia Principles</b> so that technology supports learning instead of getting in the way of it; 
+      and, <b>Constructivist Learning Theory</b> that meets people where they are and builds them up through well-scaffolded learning experiences.
     </p>
+
+    <!-- Replace with another photo of yourself -->
+    <img src="meAgain.jpeg" alt="Portrait of me" />
   </div>
 </section>
-
 
       <!-- Other Projects -->
       <section id="other">
@@ -431,6 +429,7 @@
 
 </body>
 </html>
+
 
 
 
