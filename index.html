@@ -115,6 +115,27 @@
       max-width: 65ch;
     }
 
+    .about-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* ~33% image */
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.about-layout img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 16px;
+  background: #e5e7eb;
+}
+
+@media (max-width: 700px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
     /* Hero */
     .hero {
       display: grid;
@@ -323,15 +344,22 @@
         </p>
       </section>
 
-      <!-- Bio -->
-      <section id="bio">
-        <h2>About Me</h2>
-        <p>
-          This is the longer bio section. Talk about your background, how you
-          arrived at instructional design, and what shapes your approach.
-          Mention relevant experience without turning this into a résumé.
-        </p>
-      </section>
+<!-- Bio -->
+<section id="bio">
+  <h2>About Me</h2>
+
+  <div class="about-layout">
+    <!-- Replace with another photo of yourself -->
+    <img src="https://via.placeholder.com/600x800" alt="Portrait of me" />
+
+    <p>
+      This is the longer bio section. Talk about your background, how you
+      arrived at instructional design, and what shapes your approach.
+      Mention relevant experience without turning this into a résumé.
+    </p>
+  </div>
+</section>
+
 
       <!-- Other Projects -->
       <section id="other">
@@ -403,6 +431,7 @@
 
 </body>
 </html>
+
 
 
 
