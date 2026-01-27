@@ -191,6 +191,26 @@
       font-weight: 500;
     }
 
+    /* Featured project layout */
+.featured-project {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* ~33% image, ~67% text */
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.featured-project img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+@media (max-width: 700px) {
+  .featured-project {
+    grid-template-columns: 1fr;
+  }
+}
+
+
     /* Contact */
     .contact a {
       display: inline-block;
@@ -270,42 +290,28 @@
         <img src="https://via.placeholder.com/400" alt="Headshot placeholder" />
       </section>
 
-      <!-- Featured Projects -->
-      <section id="featured">
-        <h2>Featured Projects</h2>
-        <div class="card-grid">
+<!-- Featured Projects -->
+<section id="featured">
+  <h2>Featured Projects</h2>
 
-          <div class="card">
-            <!-- Replace with project screenshot -->
-            <img src="https://via.placeholder.com/800x450" alt="Project One preview" />
-            <div>
-              <h3>Project One</h3>
-              <p>
-                A short description of the problem, context, and instructional
-                approach. Focus on decisions and outcomes rather than tools.
-              </p>
-            </div>
-            <a href="https://google.com" target="_blank" rel="noopener">
-              View case study →
-            </a>
-          </div>
+  <div class="card featured-project">
+    <!-- Replace with project screenshot -->
+    <img src="https://via.placeholder.com/600x800" alt="Featured project preview" />
 
-          <div class="card">
-            <img src="https://via.placeholder.com/800x450" alt="Project Two preview" />
-            <div>
-              <h3>Project Two</h3>
-              <p>
-                Another representative project demonstrating analysis,
-                alignment, and learner-centered design.
-              </p>
-            </div>
-            <a href="https://google.com" target="_blank" rel="noopener">
-              View case study →
-            </a>
-          </div>
+    <div>
+      <h3>Featured Project</h3>
+      <p>
+        A deeper look at a representative project. Describe the problem,
+        constraints, instructional decisions, and outcomes. Emphasize
+        thinking and impact over tools.
+      </p>
 
-        </div>
-      </section>
+      <a href="https://google.com" target="_blank" rel="noopener">
+        View case study →
+      </a>
+    </div>
+  </div>
+</section>
 
       <!-- Process -->
       <section id="process">
@@ -397,6 +403,7 @@
 
 </body>
 </html>
+
 
 
 
